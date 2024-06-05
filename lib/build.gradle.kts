@@ -19,6 +19,9 @@ repositories {
 }
 
 dependencies {
+
+    implementation("io.github.llschall:ardwloop:0.1.2")
+
     // Use the Kotlin JUnit 5 integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 

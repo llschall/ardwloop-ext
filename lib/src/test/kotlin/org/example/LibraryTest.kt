@@ -3,7 +3,9 @@
  */
 package org.example
 
+import org.llschall.ardwloop.ArdwloopStarter
 import kotlin.test.Test
+import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class LibraryTest {
@@ -11,4 +13,11 @@ class LibraryTest {
         val classUnderTest = Library()
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'")
     }
+
+    @Test
+    fun checkArdwloopVersion() {
+        assertEquals("0.1.2", ArdwloopStarter.ARDWLOOP_VERSION)
+    }
+
+
 }
