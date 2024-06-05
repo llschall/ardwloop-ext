@@ -63,11 +63,11 @@ if (!publish) {
 publishing {
     if (publish) {
         publications {
-            create<MavenPublication>("adrwloop-ext") {
+            create<MavenPublication>("ardwloop-ext") {
                 from(components["java"])
 
                 groupId = "org.gradle.sample"
-                artifactId = "adrwloop-ext"
+                artifactId = "ardwloop-ext"
                 version = "0.1"
 
                 pom {
@@ -78,7 +78,7 @@ publishing {
 
                     name = "ardwloop-ext"
                     description =
-                        "An extended version of Adrwloop, with Bluetooth support for Android."
+                        "An extended version of ardwloop, with Bluetooth support for Android."
                     url = "https://github.com/llschall/ardwloop-ext"
                     licenses {
                         license {
@@ -94,7 +94,7 @@ publishing {
                         }
                     }
                     scm {
-                        url = "https://github.com/llschall/adrwloop-ext.git"
+                        url = "https://github.com/llschall/ardwloop-ext.git"
                     }
                 }
             }
