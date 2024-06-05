@@ -11,6 +11,8 @@ plugins {
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+
+    `maven-publish`
 }
 
 repositories {
@@ -56,3 +58,16 @@ val publish = project.hasProperty("ossrh_user")
 if (!publish) {
     println("=== Publish skipped because no credential is provided. ===")
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "org.gradle.sample"
+            artifactId = "library"
+            version = "1.1"
+
+            from(components["java"])
+        }
+    }
+}
+
