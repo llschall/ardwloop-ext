@@ -42,9 +42,17 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
     }
+    withJavadocJar()
+    withSourcesJar()
 }
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+val publish = project.hasProperty("ossrh_user")
+
+if (!publish) {
+    println("=== Publish skipped because no credential is provided. ===")
 }
