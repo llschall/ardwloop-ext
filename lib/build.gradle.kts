@@ -66,9 +66,9 @@ publishing {
             create<MavenPublication>("ardwloop-ext") {
                 from(components["java"])
 
-                groupId = "org.gradle.sample"
+                groupId = "io.github.llschall"
                 artifactId = "ardwloop-ext"
-                version = "0.1"
+                version = "0.1-SNAPSHOT"
 
                 pom {
                     signing {
