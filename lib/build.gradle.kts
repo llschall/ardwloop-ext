@@ -87,7 +87,7 @@ publishing {
                         }
                     }
                     scm {
-                        url = "https://github.com/llschall/jdmxlight.git"
+                        url = "https://github.com/llschall/adrwloop-ext.git"
                     }
                 }
 
