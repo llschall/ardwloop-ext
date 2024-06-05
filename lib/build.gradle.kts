@@ -13,6 +13,7 @@ plugins {
     `java-library`
 
     `maven-publish`
+    signing
 }
 
 repositories {
@@ -70,8 +71,14 @@ publishing {
                 version = "0.1"
 
                 pom {
+                    signing {
+                        sign("publishing.publications.ardwloop-ext")
+                        sign("configurations.archives")
+                    }
+
                     name = "ardwloop-ext"
-                    description = "An extended version of Adrwloop, with Bluetooth support for Android."
+                    description =
+                        "An extended version of Adrwloop, with Bluetooth support for Android."
                     url = "https://github.com/llschall/ardwloop-ext"
                     licenses {
                         license {
@@ -90,7 +97,15 @@ publishing {
                         url = "https://github.com/llschall/adrwloop-ext.git"
                     }
                 }
-
+            }
+        }
+        repositories {
+            maven {
+                credentials {
+                    username = project.properties["ossrh_user"].toString()
+                    password = project.properties["ossrh_pwd"].toString()
+                }
+                url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2")
             }
         }
     }
