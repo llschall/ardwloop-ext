@@ -60,13 +60,38 @@ if (!publish) {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "org.gradle.sample"
-            artifactId = "library"
-            version = "1.1"
+    if (publish) {
+        publications {
+            create<MavenPublication>("adrwloop-ext") {
+                from(components["java"])
 
-            from(components["java"])
+                groupId = "org.gradle.sample"
+                artifactId = "adrwloop-ext"
+                version = "0.1"
+
+                pom {
+                    name = "ardwloop-ext"
+                    description = "An extended version of Adrwloop, with Bluetooth support for Android."
+                    url = "https://github.com/llschall/ardwloop-ext"
+                    licenses {
+                        license {
+                            name = "The Apache License, Version 2.0"
+                            url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = "llschall"
+                            name = "Laurent Schall"
+                            email = "llschall@gmx.com"
+                        }
+                    }
+                    scm {
+                        url = "https://github.com/llschall/jdmxlight.git"
+                    }
+                }
+
+            }
         }
     }
 }
