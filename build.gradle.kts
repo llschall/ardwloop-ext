@@ -89,6 +89,8 @@ publishing {
                 url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2")
             }
         }
+        signing {
+            sign(publishing.publications["ardwloop-ext"])
+        }
     }
 }
-
