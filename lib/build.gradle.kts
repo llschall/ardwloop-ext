@@ -17,13 +17,14 @@ plugins {
 }
 
 repositories {
+    mavenLocal()
     // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
 dependencies {
 
-    implementation("io.github.llschall:ardwloop:0.1.2")
+    implementation("io.github.llschall:ardwloop:0.1.3-SNAPSHOT")
 
     // Use the Kotlin JUnit 5 integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")

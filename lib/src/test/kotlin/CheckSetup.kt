@@ -8,8 +8,13 @@ import kotlin.test.assertEquals
 class CheckSetup {
     @Test
     fun checkVersions() {
+        assertEquals("0.1.3", ArdwloopStarter.VERSION)
         assertEquals("0.1.2", ArdwloopExtStarter().ARDWLOOP_EXT_VERSION)
-        assertEquals("0.1.2", ArdwloopStarter.ARDWLOOP_VERSION)
+    }
+
+    @Test
+    fun checkSnapshot() {
+        assertEquals(1000, ArdwloopStarter.VERSION_INT)
     }
 
 }
