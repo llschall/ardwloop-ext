@@ -14,7 +14,7 @@ class CheckSetup {
 
     @Test
     fun checkSnapshot() {
-        assertEquals(1000, ArdwloopStarter.VERSION_INT)
+        assertEquals(1001, ArdwloopStarter.VERSION_INT)
     }
 
 }

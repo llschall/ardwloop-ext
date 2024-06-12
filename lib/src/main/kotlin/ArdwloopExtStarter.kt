@@ -1,6 +1,5 @@
 import org.llschall.ardwloop.ArdwloopStarter
 import org.llschall.ardwloop.IArdwProgram
-import org.llschall.ardwloop.serial.SerialProvider
 import org.llschall.ardwloop.serial.port.ISerialProvider
 import org.llschall.ardwloop.structure.model.ArdwloopModel
 import org.llschall.ardwloop.structure.model.SerialModel
@@ -18,7 +17,7 @@ class ArdwloopExtStarter {
     }
 
     private fun build(model: SerialModel, timer: Timer): ISerialProvider {
-        return SerialProvider(model, timer)
+        return ExtSerialProvider()
     }
 
 }
