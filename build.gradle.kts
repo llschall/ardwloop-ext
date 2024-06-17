@@ -39,8 +39,8 @@ val publish = project.hasProperty("ossrh_user")
 if (!publish) {
     println("=== Publish skipped because no credential is provided. ===")
 }
-val user:String = project.properties["ossrh_user"].toString()
-val pwd:String = project.properties["ossrh_pwd"].toString()
+val user: String = project.properties["ossrh_user"].toString()
+val pwd: String = project.properties["ossrh_pwd"].toString()
 
 publishing {
     if (publish) {
@@ -50,7 +50,7 @@ publishing {
 
                 groupId = "io.github.llschall"
                 artifactId = "ardwloop-ext"
-                version = "0.1.2-SNAPSHOT"
+                version = "0.1.3-SNAPSHOT"
 
                 pom {
                     signing {
