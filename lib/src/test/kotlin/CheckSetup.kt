@@ -1,3 +1,4 @@
+import android.bluetooth.BluetoothAdapter
 import junit.framework.Assert.assertEquals
 import org.junit.Test
 import org.llschall.ardwloop.ArdwloopStarter
@@ -10,6 +11,11 @@ class CheckSetup {
     fun checkVersions() {
         assertEquals("0.1.3", ArdwloopStarter.VERSION)
         assertEquals("0.1.3", ArdwloopExtStarter().ARDWLOOP_EXT_VERSION)
+    }
+
+    @Test
+    fun checkBluetoothLibrary() {
+        assertEquals(10, BluetoothAdapter.STATE_OFF);
     }
 
     @Test
