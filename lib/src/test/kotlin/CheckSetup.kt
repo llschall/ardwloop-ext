@@ -1,6 +1,6 @@
-import org.junit.jupiter.api.Test
+import junit.framework.Assert.assertEquals
+import org.junit.Test
 import org.llschall.ardwloop.ArdwloopStarter
-import kotlin.test.assertEquals
 
 /**
  * Performs some basic checks on the build
