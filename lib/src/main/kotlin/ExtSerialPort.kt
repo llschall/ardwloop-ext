@@ -3,6 +3,9 @@ import org.llschall.ardwloop.structure.model.SerialModel
 import org.llschall.ardwloop.structure.utils.Timer
 
 class ExtSerialPort(model: SerialModel, timer: Timer) : ISerialPort {
+
+    val handler: Handler = Handler()
+
     override var baudRate: Int
         get() = TODO("Not yet implemented")
         set(value) {}
@@ -30,7 +33,8 @@ class ExtSerialPort(model: SerialModel, timer: Timer) : ISerialPort {
     }
 
     override fun openPort(): Boolean {
-        TODO("Not yet implemented")
+        handler.connect()
+        return true
     }
 
     override fun readBytes(bytes: ByteArray?, n: Long) {
@@ -38,6 +42,10 @@ class ExtSerialPort(model: SerialModel, timer: Timer) : ISerialPort {
     }
 
     override fun writeBytes(bytes: ByteArray?, size: Int): Int {
-        TODO("Not yet implemented")
+        if (bytes != null) {
+            handler.write(bytes)
+            return bytes.size
+        }
+        return 0;
     }
 }

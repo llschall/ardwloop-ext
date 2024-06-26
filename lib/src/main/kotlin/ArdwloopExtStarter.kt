@@ -17,7 +17,7 @@ class ArdwloopExtStarter {
     }
 
     private fun build(model: SerialModel, timer: Timer): ISerialProvider {
-        return ExtSerialProvider()
+        return ExtSerialProvider(model, timer)
     }
 
 }
