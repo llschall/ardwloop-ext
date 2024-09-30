@@ -25,12 +25,12 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
-val publish = project.hasProperty("ossrh_user")
+val publish = project.hasProperty("token_usr")
 if (!publish) {
     println("=== Publish skipped because no credential is provided. ===")
 }
-val user: String = project.properties["ossrh_user"].toString()
-val pwd: String = project.properties["ossrh_pwd"].toString()
+val user: String = project.properties["token_usr"].toString()
+val pwd: String = project.properties["token_pwd"].toString()
 
 publishing {
     if (publish) {
@@ -40,7 +40,7 @@ publishing {
 
                 groupId = "io.github.llschall"
                 artifactId = "ardwloop-ext"
-                version = "0.1.2-SNAPSHOT"
+                version = "0.1.2"
 
                 pom {
                     signing {
@@ -76,8 +76,8 @@ publishing {
                     username = user
                     password = pwd
                 }
-                url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
-                // url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2")
+                // url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
+                url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2")
             }
         }
         signing {
