@@ -11,7 +11,7 @@ class CheckSetup {
     fun checkVersions() {
         assertEquals("0.1.3", ArdwloopStarter.VERSION)
         assertEquals(1001, ArdwloopStarter.VERSION_INT)
-        assertEquals("0.1.2", ArdwloopExtStarter().ARDWLOOP_EXT_VERSION)
+        assertEquals("0.1.3", ArdwloopExtStarter().ARDWLOOP_EXT_VERSION)
         assertEquals(1001, ArdwloopExtStarter().ARDWLOOP_EXT_VERSION_INT)
 
     }
