@@ -1,3 +1,5 @@
+package org.llschall.ardwloop.ext
+
 import org.llschall.ardwloop.serial.port.ISerialPort
 import org.llschall.ardwloop.structure.model.SerialModel
 import org.llschall.ardwloop.structure.utils.Timer

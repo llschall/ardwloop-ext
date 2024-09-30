@@ -2,6 +2,7 @@ import android.bluetooth.BluetoothAdapter
 import junit.framework.Assert.assertEquals
 import org.junit.Test
 import org.llschall.ardwloop.ArdwloopStarter
+import org.llschall.ardwloop.ext.ArdwloopExtStarter
 
 /**
  * Performs some basic checks on the build
