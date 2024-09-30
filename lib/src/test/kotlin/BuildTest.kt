@@ -9,9 +9,13 @@ import org.llschall.ardwloop.ArdwloopStarter
 class BuildTest {
     @Test
     fun checkVersions() {
-        assertEquals("0.1.3", ArdwloopStarter.VERSION)
-        assertEquals(1001, ArdwloopStarter.VERSION_INT)
+        assertEquals("0.1.6", ArdwloopStarter.VERSION)
         assertEquals("0.1.3", ArdwloopExtStarter().ARDWLOOP_EXT_VERSION)
+    }
+
+    @Test
+    fun checkSnapshot() {
+        assertEquals(1003, ArdwloopStarter.VERSION_INT)
         assertEquals(1001, ArdwloopExtStarter().ARDWLOOP_EXT_VERSION_INT)
     }
 
@@ -19,10 +23,4 @@ class BuildTest {
     fun checkBluetoothLibrary() {
         assertEquals(10, BluetoothAdapter.STATE_OFF);
     }
-
-    @Test
-    fun checkSnapshot() {
-        assertEquals(1001, ArdwloopStarter.VERSION_INT)
-    }
-
 }
