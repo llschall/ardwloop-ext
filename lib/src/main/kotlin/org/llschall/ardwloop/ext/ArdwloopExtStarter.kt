@@ -12,8 +12,8 @@ import org.llschall.ardwloop.structure.utils.Timer
  * ArdwloopExtStarter is the entry point of the library
  */
 public class ArdwloopExtStarter {
-    val ARDWLOOP_EXT_VERSION = "0.1.3"
-    val ARDWLOOP_EXT_VERSION_INT = 1001
+    val VERSION = "0.1.3"
+    val VERSION_INT = 1001
 
     fun start(program: IArdwProgram): ArdwloopModel {
         return ArdwloopStarter.get().start(program, ArdwloopExtStarter()::build)
