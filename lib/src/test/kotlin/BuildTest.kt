@@ -12,7 +12,7 @@ class BuildTest {
     fun checkArdwloop() {
         assertEquals("0.1.6", ArdwloopStarter.VERSION)
         assertEquals(1003, ArdwloopStarter.VERSION_INT)
-        assertEquals("0.1.3", ArdwloopExtStarter().VERSION)
+        assertEquals("0.1.4", ArdwloopExtStarter().VERSION)
         assertEquals(1001, ArdwloopExtStarter().VERSION_INT)
     }
 
