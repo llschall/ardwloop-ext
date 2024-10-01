@@ -11,6 +11,8 @@ lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.2"
 composeBom = "2024.09.02"
 lifecycleViewmodelCompose = "2.8.6"
+appcompat = "1.7.0"
+material = "1.12.0"
 
 [libraries]
 androidx-bluetooth = { module = "androidx.bluetooth:bluetooth", version.ref = "bluetooth" }
@@ -30,6 +32,8 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
