@@ -11,18 +11,13 @@ class ExtSerialPort(model: SerialModel, timer: Timer) : ISerialPort {
     override var baudRate: Int
         get() = TODO("Not yet implemented")
         set(value) {}
-    override val cTS: Boolean
-        get() = TODO("Not yet implemented")
-    override val dCD: Boolean
-        get() = TODO("Not yet implemented")
+
     override val descriptivePortName: String?
         get() = TODO("Not yet implemented")
-    override val deviceReadBufferSize: Int
-        get() = TODO("Not yet implemented")
-    override val deviceWriteBufferSize: Int
-        get() = TODO("Not yet implemented")
+
     override val portDescription: String?
         get() = TODO("Not yet implemented")
+
     override val systemPortName: String
         get() = TODO("Not yet implemented")
 
