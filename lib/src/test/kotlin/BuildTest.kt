@@ -18,7 +18,7 @@ class BuildTest {
 
     @Test
     fun checkJava() {
-        assertEquals("17", System.getProperty("java.version").split(".")[0])
+        assertEquals("21", System.getProperty("java.version").split(".")[0])
     }
 
     @Test
