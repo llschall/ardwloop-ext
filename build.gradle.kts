@@ -3,6 +3,7 @@ plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.compose.compiler) apply false
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
