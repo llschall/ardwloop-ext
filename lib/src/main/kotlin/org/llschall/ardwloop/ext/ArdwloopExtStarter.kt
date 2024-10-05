@@ -18,26 +18,26 @@ public class ArdwloopExtStarter {
     val VERSION = "0.1.4"
     val VERSION_INT = 1001
 
-    fun start(program: IArdwProgram, socket: BluetoothSocket): ArdwloopModel {
+    fun start(program: IArdwProgram, socket: BluetoothSocket, portName: String): ArdwloopModel {
 
-        val port = ExtSerialPort(socket = socket)
+        val port = ExtSerialPort(socket = socket, name = portName)
 
-        val build = fun(model: SerialModel, timer: Timer): ISerialProvider {
+        val build = fun(_: SerialModel, _: Timer): ISerialProvider {
             return ExtSerialProvider(port)
         }
 
-        ArdwloopStarter.get().setSelector(Selector())
+        ArdwloopStarter.get().setSelector(Selector(portName))
         return ArdwloopStarter.get().start(program, build)
     }
 }
 
-class Selector() : IArdwPortSelector {
+class Selector(private val name: String) : IArdwPortSelector {
 
     override fun select(desc: ArdwPortDescriptor): Boolean {
         return true
     }
 
     override fun list(): List<ArdwPortDescriptor> {
-        return listOf(ArdwPortDescriptor("HC05", "HC05", "HC05"))
+        return listOf(ArdwPortDescriptor(name, name, name))
     }
 }
