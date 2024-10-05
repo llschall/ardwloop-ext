@@ -1,46 +1,52 @@
 package org.llschall.ardwloop.ext
 
+import android.bluetooth.BluetoothSocket
 import org.llschall.ardwloop.serial.port.ISerialPort
 import org.llschall.ardwloop.structure.model.SerialModel
 import org.llschall.ardwloop.structure.utils.Timer
 
-class ExtSerialPort(model: SerialModel, timer: Timer) : ISerialPort {
-
-    val handler: Handler = Handler()
+class ExtSerialPort(
+    private val socket: BluetoothSocket,
+) : ISerialPort {
 
     override var baudRate: Int
-        get() = TODO("Not yet implemented")
+        get() = 2024
         set(value) {}
 
-    override val descriptivePortName: String?
-        get() = TODO("Not yet implemented")
+    override val descriptivePortName: String
+        get() = "HC05"
 
-    override val portDescription: String?
-        get() = TODO("Not yet implemented")
+    override val portDescription: String
+        get() = "HC05"
 
     override val systemPortName: String
-        get() = TODO("Not yet implemented")
+        get() = "HC05"
 
     override fun bytesAvailable(): Int {
-        TODO("Not yet implemented")
+        return socket.inputStream.available()
     }
 
     override fun closePort() {
-        TODO("Not yet implemented")
+        return socket.close()
     }
 
     override fun openPort(): Boolean {
-        handler.connect()
         return true
     }
 
     override fun readBytes(bytes: ByteArray?, n: Long) {
-        TODO("Not yet implemented")
+        val stream = socket.inputStream
+        var i = 0;
+        while (i < n) {
+            val b = stream.read()
+            bytes!![i] = b.toByte()
+            i++
+        }
     }
 
     override fun writeBytes(bytes: ByteArray?, size: Int): Int {
         if (bytes != null) {
-            handler.write(bytes)
+            socket.outputStream.write(bytes)
             return bytes.size
         }
         return 0;
