@@ -87,7 +87,7 @@ if (!project.hasProperty("token_usr")) {
 
                     groupId = "io.github.llschall"
                     artifactId = "ardwloop-ext"
-                    version = "0.1.4-SNAPSHOT"
+                    version = "0.1.4"
 
                     pom {
                         signing {
