@@ -2,25 +2,24 @@ package org.llschall.ardwloop.ext
 
 import android.bluetooth.BluetoothSocket
 import org.llschall.ardwloop.serial.port.ISerialPort
-import org.llschall.ardwloop.structure.model.SerialModel
-import org.llschall.ardwloop.structure.utils.Timer
 
 class ExtSerialPort(
+    val name: String,
     private val socket: BluetoothSocket,
 ) : ISerialPort {
 
     override var baudRate: Int
         get() = 2024
-        set(value) {}
+        set(_) {}
 
     override val descriptivePortName: String
-        get() = "HC05"
+        get() = name
 
     override val portDescription: String
-        get() = "HC05"
+        get() = name
 
     override val systemPortName: String
-        get() = "HC05"
+        get() = name
 
     override fun bytesAvailable(): Int {
         return socket.inputStream.available()
