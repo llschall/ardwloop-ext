@@ -18,7 +18,12 @@ public class ArdwloopExtStarter {
     val VERSION = "0.1.5"
     val VERSION_INT = 1001
 
-    fun start(program: IArdwProgram, socket: BluetoothSocket, portName: String): ArdwloopModel {
+    fun start(
+        program: IArdwProgram,
+        baud: Int,
+        socket: BluetoothSocket,
+        portName: String
+    ): ArdwloopModel {
 
         val port = ExtSerialPort(socket = socket, name = portName)
 
@@ -27,7 +32,7 @@ public class ArdwloopExtStarter {
         }
 
         ArdwloopStarter.get().setSelector(Selector(portName))
-        return ArdwloopStarter.get().start(program, build)
+        return ArdwloopStarter.get().start(program, baud, build)
     }
 }
 
