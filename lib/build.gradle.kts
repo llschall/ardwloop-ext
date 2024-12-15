@@ -7,6 +7,12 @@ plugins {
     signing
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 android {
     namespace = "org.llschall.ardwloop.ext"
     compileSdk = 34
