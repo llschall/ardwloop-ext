@@ -10,7 +10,7 @@ import org.llschall.ardwloop.ext.ArdwloopExtStarter
 class BuildTest {
     @Test
     fun checkArdwloop() {
-        assertEquals("0.2.6", ArdwloopStarter.VERSION)
+        assertEquals("0.2.7", ArdwloopStarter.VERSION)
         assertEquals(1001, ArdwloopStarter.VERSION_INT)
         assertEquals("0.1.7", ArdwloopExtStarter().VERSION)
         assertEquals(1001, ArdwloopExtStarter().VERSION_INT)
