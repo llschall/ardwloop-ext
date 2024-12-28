@@ -93,7 +93,7 @@ if (!project.hasProperty("token_usr")) {
 
                     groupId = "io.github.llschall"
                     artifactId = "ardwloop-ext"
-                    version = "0.1.9"
+                    version = "0.2.0-SNAPSHOT"
 
                     pom {
                         signing {
@@ -129,7 +129,7 @@ if (!project.hasProperty("token_usr")) {
                         username = user
                         password = pwd
                     }
-                    url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2")
+                    url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
                 }
             }
             signing {
