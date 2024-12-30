@@ -16,7 +16,7 @@ import java.util.UUID
  * ArdwloopExtStarter is the entry point of the library
  */
 public class ArdwloopExtStarter {
-    val VERSION = "0.2.1"
+    val VERSION = "0.2.2"
     val VERSION_INT = 1001
 
 
