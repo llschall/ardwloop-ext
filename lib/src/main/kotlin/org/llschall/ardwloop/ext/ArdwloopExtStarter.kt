@@ -9,6 +9,7 @@ import org.llschall.ardwloop.serial.port.ISerialProvider
 import org.llschall.ardwloop.structure.model.ArdwloopModel
 import org.llschall.ardwloop.structure.model.SerialModel
 import org.llschall.ardwloop.structure.utils.Timer
+import java.util.UUID
 
 
 /**
@@ -17,6 +18,11 @@ import org.llschall.ardwloop.structure.utils.Timer
 public class ArdwloopExtStarter {
     val VERSION = "0.2.1"
     val VERSION_INT = 1001
+
+
+    // The "well-known SSP UUID"
+    // See https://developer.android.com/reference/android/bluetooth/BluetoothDevice
+    val SPP_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
 
     fun start(
         program: IArdwProgram,
