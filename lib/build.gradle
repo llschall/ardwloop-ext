@@ -14,7 +14,7 @@ java {
 
 android {
     namespace = "org.llschall.ardwloop.ext"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
