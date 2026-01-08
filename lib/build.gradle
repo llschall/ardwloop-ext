@@ -80,7 +80,7 @@ afterEvaluate {
 
                 groupId = 'io.github.llschall'
                 artifactId = 'ardwloop-ext'
-                version = '0.2.2-SNAPSHOT'
+                version = '0.2.2'
 
                 pom {
                     signing {
